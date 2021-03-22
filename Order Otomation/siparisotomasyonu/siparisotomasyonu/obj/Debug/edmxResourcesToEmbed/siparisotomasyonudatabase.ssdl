@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="siparisotomasyonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="musteri">
+    <Key>
+      <PropertyRef Name="musteriID" />
+    </Key>
+    <Property Name="musteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="adres" Type="nvarchar(max)" />
+    <Property Name="tcno" Type="nvarchar" MaxLength="50" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sepet">
+    <Key>
+      <PropertyRef Name="sepetID" />
+    </Key>
+    <Property Name="sepetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="musteriID" Type="int" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fiyat" Type="float" />
+    <Property Name="Adet" Type="int" />
+    <Property Name="ID" Type="int" />
+    <Property Name="ToplamFiyat" Type="float" />
+  </EntityType>
+  <EntityType Name="urun">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urun_ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="urun_fiyat" Type="float" />
+    <Property Name="urun_aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="yonetici">
+    <Key>
+      <PropertyRef Name="yoneticiID" />
+    </Key>
+    <Property Name="yoneticiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="yon_sifre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="siparisotomasyonuModelStoreContainer">
+    <EntitySet Name="musteri" EntityType="Self.musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sepet" EntityType="Self.sepet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urun" EntityType="Self.urun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="yonetici" EntityType="Self.yonetici" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

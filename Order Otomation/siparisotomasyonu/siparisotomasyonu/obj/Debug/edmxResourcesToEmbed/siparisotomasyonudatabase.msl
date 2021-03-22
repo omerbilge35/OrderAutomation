@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="siparisotomasyonuModelStoreContainer" CdmEntityContainer="siparisotomasyonuEntities">
+    <EntitySetMapping Name="yonetici">
+      <EntityTypeMapping TypeName="siparisotomasyonuModel.yonetici">
+        <MappingFragment StoreEntitySet="yonetici">
+          <ScalarProperty Name="yon_sifre" ColumnName="yon_sifre" />
+          <ScalarProperty Name="yoneticiID" ColumnName="yoneticiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteri">
+      <EntityTypeMapping TypeName="siparisotomasyonuModel.musteri">
+        <MappingFragment StoreEntitySet="musteri">
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="tcno" ColumnName="tcno" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urun">
+      <EntityTypeMapping TypeName="siparisotomasyonuModel.urun">
+        <MappingFragment StoreEntitySet="urun">
+          <ScalarProperty Name="urun_aciklama" ColumnName="urun_aciklama" />
+          <ScalarProperty Name="urun_fiyat" ColumnName="urun_fiyat" />
+          <ScalarProperty Name="urun_ad" ColumnName="urun_ad" />
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sepet">
+      <EntityTypeMapping TypeName="siparisotomasyonuModel.sepet">
+        <MappingFragment StoreEntitySet="sepet">
+          <ScalarProperty Name="ToplamFiyat" ColumnName="ToplamFiyat" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="musteriID" ColumnName="musteriID" />
+          <ScalarProperty Name="sepetID" ColumnName="sepetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

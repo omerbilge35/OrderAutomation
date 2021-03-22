@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="siparisotomasyonuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="siparisotomasyonuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="yonetici" EntityType="siparisotomasyonuModel.yonetici" />
+    <EntitySet Name="musteri" EntityType="siparisotomasyonuModel.musteri" />
+    <EntitySet Name="urun" EntityType="siparisotomasyonuModel.urun" />
+    <EntitySet Name="sepet" EntityType="siparisotomasyonuModel.sepet" />
+  </EntityContainer>
+  <EntityType Name="yonetici">
+    <Key>
+      <PropertyRef Name="yoneticiID" />
+    </Key>
+    <Property Name="yoneticiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yon_sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="musteri">
+    <Key>
+      <PropertyRef Name="musteriID" />
+    </Key>
+    <Property Name="musteriID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="ad" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="soyad" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="adres" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="tcno" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="sifre" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+  </EntityType>
+  <EntityType Name="urun">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urun_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="urun_fiyat" Type="Double" />
+    <Property Name="urun_aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sepet">
+    <Key>
+      <PropertyRef Name="sepetID" />
+    </Key>
+    <Property Name="sepetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="musteriID" Type="Int32" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="Double" />
+    <Property Name="Adet" Type="Int32" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="ToplamFiyat" Type="Double" />
+  </EntityType>
+</Schema>

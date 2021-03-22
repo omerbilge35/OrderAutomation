@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2A036D3-D10C-4CAA-9318-8899DC1B9A1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>siparisotomasyonu</RootNamespace>
+    <AssemblyName>siparisotomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alisveris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alisveris.Designer.cs">
+      <DependentUpon>Alisveris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteri.cs">
+      <DependentUpon>siparisotomasyonudatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriGiris.Designer.cs">
+      <DependentUpon>MusteriGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriKayit.Designer.cs">
+      <DependentUpon>MusteriKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriTakip.Designer.cs">
+      <DependentUpon>MusteriTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sepet.cs">
+      <DependentUpon>siparisotomasyonudatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="siparisotomasyonudatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisotomasyonudatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="siparisotomasyonudatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisotomasyonudatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="siparisotomasyonudatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisotomasyonudatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="siparisotomasyonuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisotomasyonuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="siparisotomasyonuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisotomasyonuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="siparisotomasyonuDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisotomasyonuDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="siparisotomasyonuDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siparisotomasyonuDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="urun.cs">
+      <DependentUpon>siparisotomasyonudatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici.cs">
+      <DependentUpon>siparisotomasyonudatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiGiris.Designer.cs">
+      <DependentUpon>YoneticiGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel.Designer.cs">
+      <DependentUpon>YoneticiPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ödeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ödeme.Designer.cs">
+      <DependentUpon>Ödeme.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alisveris.resx">
+      <DependentUpon>Alisveris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriGiris.resx">
+      <DependentUpon>MusteriGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriKayit.resx">
+      <DependentUpon>MusteriKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriTakip.resx">
+      <DependentUpon>MusteriTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="YoneticiGiris.resx">
+      <DependentUpon>YoneticiGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiPanel.resx">
+      <DependentUpon>YoneticiPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ödeme.resx">
+      <DependentUpon>Ödeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="siparisotomasyonudatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>siparisotomasyonudatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="siparisotomasyonudatabase.edmx.diagram">
+      <DependentUpon>siparisotomasyonudatabase.edmx</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet.xsc">
+      <DependentUpon>siparisotomasyonuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>siparisotomasyonuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="siparisotomasyonuDataSet.xss">
+      <DependentUpon>siparisotomasyonuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet1.xsc">
+      <DependentUpon>siparisotomasyonuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>siparisotomasyonuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="siparisotomasyonuDataSet1.xss">
+      <DependentUpon>siparisotomasyonuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet2.xsc">
+      <DependentUpon>siparisotomasyonuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>siparisotomasyonuDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="siparisotomasyonuDataSet2.xss">
+      <DependentUpon>siparisotomasyonuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet3.xsc">
+      <DependentUpon>siparisotomasyonuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="siparisotomasyonuDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>siparisotomasyonuDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="siparisotomasyonuDataSet3.xss">
+      <DependentUpon>siparisotomasyonuDataSet3.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="siparisotomasyonudatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>siparisotomasyonudatabase.Context.cs</LastGenOutput>
+      <DependentUpon>siparisotomasyonudatabase.edmx</DependentUpon>
+    </Content>
+    <Content Include="siparisotomasyonudatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>siparisotomasyonudatabase.edmx</DependentUpon>
+      <LastGenOutput>siparisotomasyonudatabase.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
